@@ -1,7 +1,27 @@
+body {
+  background-color: #4295f4;
+}
+h1 {
+  color: white;
+  font-weight: bold;
+}
+h3 {
+  color: white;
+}
 .col-md-12 {
     text-align: center;
 }
 .logo {
-    height: 200px;
-    width: 300px;
+    height: 175px;
+    width: 250px;
+}
+.question {
+  border: solid black 3px;
+  background-color: #cccccc;
+  margin: 10px;
+  padding: 10px;
+}
+.timer {
+  position: fixed;
+  font-size: 20px;
 }
