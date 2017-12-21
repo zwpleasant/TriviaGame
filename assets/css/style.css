@@ -2,11 +2,11 @@ body {
   background-color: #42a7f4;
 }
 h1 {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 h3 {
-  color: white;
+  color: black;
 }
 h4 {
   text-align: center;
@@ -28,6 +28,12 @@ h4 {
   background-color: #e6e6e6;
   margin: 10px;
   padding: 15px;
+}
+.intro {
+  border: solid black 3px;
+  background-color: #e6e6e6;
+  margin: 10px;
+  padding: 10px;
 }
 .timer {
   position: fixed;
