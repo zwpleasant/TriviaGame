@@ -32,16 +32,11 @@ $(document).ready(function(){
 
   // define functions
 
-  // function that grabs the user choice
-  $("input[type='button']").click(function(){
-    var userAnswer1 = $("input[name='q1']:checked").val();
-    console.log(userAnswer1);
-  });
-
   // on click that starts game when user clicks start button
   $(".start").click(function() {
     console.log("user has started the game");
     // start the game on a user click
+    setTimeout(timeUp, 1000 * 30);
   });
 
   // on click function that ends game with user clicks submit button
@@ -67,13 +62,16 @@ $(document).ready(function(){
     userAnswer10 = $("input[name='q10']:checked").val();
     console.log(userAnswer10);
 
+    clearTimeout(timeUp);
+    
     endGame();
     // finish the game on a user click
   });
 
   // function that automatically ends the game when timeRemaining is at 0
-  function timeOut() {
-    // if timeRemaining equals 0, run the endGame function
+  function timeUp() {
+    $(".timeLeft").text("Time's up!");
+    endGame();
   }
 
   // function that checks the answers and displays relative information
