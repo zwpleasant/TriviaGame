@@ -66,6 +66,8 @@ $(document).ready(function(){
     console.log(userAnswer9);
     userAnswer10 = $("input[name='q10']:checked").val();
     console.log(userAnswer10);
+
+    endGame();
     // finish the game on a user click
   });
 
@@ -76,8 +78,84 @@ $(document).ready(function(){
 
   // function that checks the answers and displays relative information
   function endGame() {
-    // if user guesses correctly, add one to correctAnswer
-    // else, add one to incorrectAnswer
+    if (userAnswer1 == answer1) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+    }
+
+    if (userAnswer2 == answer2) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+      $(".incorrectResults").text("Incorrect: " + incorrectAnswer);
+    }
+
+    if (userAnswer3 == answer3) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+      $(".incorrectResults").text("Incorrect: " + incorrectAnswer);
+    }
+
+    if (userAnswer4 == answer4) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+      $(".incorrectResults").text("Incorrect: " + incorrectAnswer);
+    }
+
+    if (userAnswer5 == answer5) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+      $(".incorrectResults").text("Incorrect: " + incorrectAnswer);
+    }
+
+    if (userAnswer6 == answer6) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+      $(".incorrectResults").text("Incorrect: " + incorrectAnswer);
+    }
+
+    if (userAnswer7 == answer7) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+      $(".incorrectResults").text("Incorrect: " + incorrectAnswer);
+    }
+
+    if (userAnswer8 == answer8) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+      $(".incorrectResults").text("Incorrect: " + incorrectAnswer);
+    }
+
+    if (userAnswer9 == answer9) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+      $(".incorrectResults").text("Incorrect: " + incorrectAnswer);
+    }
+
+    if (userAnswer10 == answer10) {
+      correctAnswer++;
+      $(".correctResults").text("Correct: " + correctAnswer);
+    } else {
+      incorrectAnswer++;
+      $(".incorrectResults").text("Incorrect: " + incorrectAnswer);
+    }
   }
 
 });
