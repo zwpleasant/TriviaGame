@@ -4,7 +4,6 @@ $(document).ready(function(){
   var count = 30;
   var correctAnswer = 0;
   var incorrectAnswer = 0;
-  var noAnswer = 0;
 
   // define variables for correct answers
   var answer1 = "a";
@@ -19,7 +18,7 @@ $(document).ready(function(){
   var answer10 = "d";
 
   // define variables for user answers
-  var userAnswer1 = ""; // need to populate these...
+  var userAnswer1 = "";
   var userAnswer2 = "";
   var userAnswer3 = "";
   var userAnswer4 = "";
@@ -78,18 +77,10 @@ $(document).ready(function(){
     console.log(userAnswer9);
     userAnswer10 = $("input[name='q10']:checked").val();
     console.log(userAnswer10);
-
-    clearTimeout(timeUp);
     
     endGame();
     // finish the game on a user click
   });
-
-  // function that automatically ends the game when timeRemaining is at 0
-  function timeUp() {
-    $(".timeLeft").text("Time's up!");
-    endGame();
-  }
 
   // function that checks the answers and displays relative information
   function endGame() {
