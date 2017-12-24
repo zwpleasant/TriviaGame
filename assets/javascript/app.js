@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   // define variables for scoring
-  var timeRemaining = 30;
+  var count = 30;
   var correctAnswer = 0;
   var incorrectAnswer = 0;
   var noAnswer = 0;
@@ -36,7 +36,24 @@ $(document).ready(function(){
   $(".start").click(function() {
     console.log("user has started the game");
     // start the game on a user click
-    setTimeout(timeUp, 1000 * 30);
+    // setTimeout(timeUp, 1000 * 30);
+    var count = 30;
+
+    var counter = setInterval(timer, 1000);
+
+    function timer()
+    {
+      count = count - 1;
+      if (count <= 0)
+      {
+        clearInterval(counter);
+        endGame();
+        console.log("Game has ended. Time is up!");
+      }
+
+      $(".timeLeft").text("Time Remaining: " + count + " seconds");
+    }
+
   });
 
   // on click function that ends game with user clicks submit button
